@@ -16,9 +16,7 @@
 </head>
 
 <body>
-
 <div>
-
  <h1>:(</h1>
 
  <p>
@@ -41,9 +39,9 @@ soundManager.onload = function() {
 		}));
 	});
 };
-var buttons = $("a[href$=mp3]").button().click(function() {
+var buttons = $("a[href$=mp3]").button().click(function(event) {
+	event.preventDefault();
 	$(this).data("sound").play();
-	return false;
 });
 </script>
 
